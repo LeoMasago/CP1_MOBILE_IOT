@@ -6,6 +6,11 @@
 ### Descrição do projeto
 - Projeto desenvolvido com finalidade de ser um front-end de uma tela de login do aplicativo da FIAP.
 
+### Imagens do App
+<img width="291" height="642" alt="image" src="https://github.com/user-attachments/assets/2a52ac41-95db-486e-a85d-02b05848ca3b" />
+<img width="290" height="640" alt="image" src="https://github.com/user-attachments/assets/b2fb62d8-92e1-4fd1-811d-ea3bf3bf3461" />
+
+
 ### Tecnologias
 - **Expo**: fluxo de desenvolvimento simplificado para React Native
 - **React Native**: desenvolvimento mobile nativo com React
