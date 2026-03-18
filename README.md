@@ -1,12 +1,17 @@
-### Template React Native com Expo + NativeWind
+### Integrantes
+- Léo Masago 557768
+- Luiz Henrique Silva 555235
+- Eduardo Tomazela 556807
 
-Este repositório é um template para iniciar rapidamente um app React Native utilizando Expo, TypeScript e NativeWind (Tailwind CSS para React Native). Ele já vem configurado com as dependências e arquivos necessários para começar a estilizar com classes utilitárias.
+### Descrição do projeto
+- Projeto desenvolvido com finalidade de ser um front-end de uma tela de login do aplicativo da FIAP.
 
 ### Tecnologias
 - **Expo**: fluxo de desenvolvimento simplificado para React Native
 - **React Native**: desenvolvimento mobile nativo com React
 - **TypeScript**: tipagem estática para maior segurança
 - **NativeWind**: estilização usando utilitários à la Tailwind
+- **Icons Expo**: Icones
 
 ### Pré-requisitos
 - Node.js LTS instalado
@@ -39,6 +44,7 @@ w  # Web (quando aplicável)
 ### Estrutura principal
 ```
 assets/               # imagens e fontes
+components/           # componentes da aplicação
 styles/               # estilos globais e presets do NativeWind
 types/                # tipos e declarações auxiliares
 App.tsx               # entrada principal do app
@@ -49,65 +55,4 @@ nativewind-env.d.ts   # tipos do NativeWind
 tsconfig.json         # configuração TypeScript
 ```
 
-### Configuração do NativeWind
-O template já inclui as configurações essenciais para o NativeWind funcionar corretamente.
 
-- `tailwind.config.js`: define o preset e paths a serem analisados
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './App.{js,jsx,ts,tsx}',
-    './app/**/*.{js,jsx,ts,tsx}',
-    './components/**/*.{js,jsx,ts,tsx}',
-    './styles/**/*.{js,jsx,ts,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-- `babel.config.js`: adiciona o plugin do NativeWind
-```js
-module.exports = function(api) {
-  api.cache(true);
-  return {
-    presets: ['babel-preset-expo'],
-    plugins: ['nativewind/babel'],
-  };
-};
-```
-
-- `nativewind-env.d.ts`: fornece dicas de tipo
-```ts
-/// <reference types="nativewind/types" />
-```
-
-Exemplo de uso no `App.tsx`:
-```tsx
-import { Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-semibold text-blue-600">
-        Template Expo + NativeWind
-      </Text>
-    </View>
-  );
-}
-```
-
-### Dicas e resolução de problemas
-- Se classes não aplicarem estilo, confirme os caminhos em `content` do `tailwind.config.js`.
-- Garanta que o plugin `nativewind/babel` esteja no `babel.config.js`.
-- Após alterar `tailwind.config.js`, reinicie o bundler do Expo.
-- Em iOS/Android, limpe cache quando necessário:
-```bash
-expo start -c
-```
-
-### Licença
-Este projeto é disponibilizado como template educacional. Adapte conforme a sua necessidade.
